@@ -69,4 +69,12 @@ class ProductsList with ChangeNotifier {
     _myProducts.removeAt(index);
     notifyListeners();
   }
+  
+    int get totalCost {
+    int cost;
+    for (int i = 0; i < _myProducts.length; i++) {
+      cost = _myProducts[i].price + cost;
+    }
+    return cost;
+  }
 }
