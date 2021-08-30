@@ -13,6 +13,7 @@ class _MyProductsState extends State<MyProducts> {
   @override
   Widget build(BuildContext context) {
     final productsList = Provider.of<ProductsList>(context).products;
+    final value = Provider.of<ProductsList>(context).totalCost;
     return Scaffold(
       resizeToAvoidBottomInset: true,
       backgroundColor: HexColor('#EFEFEF'),
@@ -42,7 +43,7 @@ class _MyProductsState extends State<MyProducts> {
                 ),
                 Spacer(),
                 Text(
-                  'Value \$ 3996',
+                  'Value \$ $value',
                   style: TextStyle(
                       fontSize: 25,
                       color: HexColor('#666565').withOpacity(0.8)),
