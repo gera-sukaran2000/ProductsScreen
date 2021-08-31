@@ -71,7 +71,7 @@ class ProductsList with ChangeNotifier {
   }
   
     int get totalCost {
-    int cost;
+    int cost = 0;
     for (int i = 0; i < _myProducts.length; i++) {
       cost = _myProducts[i].price + cost;
     }
